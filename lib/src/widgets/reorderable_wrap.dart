@@ -1269,11 +1269,12 @@ class _ReorderableWrapContentState extends State<_ReorderableWrapContent>
       transform: new Matrix4.rotationZ(0),
       alignment: FractionalOffset.topLeft,
       child: Material(
-        child:
-            Card(child: ConstrainedBox(constraints: constraints, child: child)),
-        elevation: 6.0,
+        elevation: 10,
+        borderRadius: const BorderRadius.all(Radius.circular(36.0)),
+        borderOnForeground: true,
+        child: ConstrainedBox(constraints: constraints, child: child),
         color: Colors.transparent,
-        borderRadius: BorderRadius.zero,
+        //borderRadius: BorderRadius.zero,
       ),
     );
   }
